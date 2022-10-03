@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+
+<FlowPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="archiver.controller.MainViewController">
+   <children>
+      <MenuBar prefHeight="26.0" prefWidth="639.0">
+         <menus>
+            <Menu id="menuFile" mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="Close" mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane fx:id="mainPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="250.0" prefWidth="640.0">
+         <children>
+            <Pane layoutX="304.0" layoutY="2.0" prefHeight="250.0" prefWidth="335.0">
+               <children>
+                  <Pane prefHeight="59.0" prefWidth="335.0">
+                     <children>
+                        <Button fx:id="zipButton" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="ZIP" />
+                        <Button fx:id="rarButton" layoutX="128.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="RAR" />
+                        <Button fx:id="tarButton" layoutX="241.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="TAR" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="13.0" layoutY="69.0" text="File Name :" />
+                  <TextField fx:id="inputFileName" layoutX="91.0" layoutY="63.0" prefHeight="15.0" prefWidth="220.0" style="-fx-border-color: gray;" />
+                  <Button fx:id="startButton" layoutX="20.0" layoutY="110.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="300.0" text="Start" />
+                  <Button fx:id="extractButton" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="300.0" text="Extract" />
+                  <Button fx:id="clearButton" layoutX="20.0" layoutY="190.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="300.0" text="Clear" />
+               </children>
+            </Pane>
+            <Label layoutX="102.0" layoutY="14.0" text="Drop file below :" />
+            <ListView fx:id="inputListView" layoutX="31.0" layoutY="54.0" prefHeight="157.0" prefWidth="250.0" />
+            <Pane fx:id="verificationPane" layoutX="125.0" layoutY="25.0" prefHeight="200.0" prefWidth="365.0" style="-fx-background-color: #ffe3d0; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;" visible="false">
+               <children>
+                  <Label layoutX="30.0" layoutY="75.0" text="Password :" />
+                  <TextField fx:id="password1" layoutX="120.0" layoutY="70.0" prefHeight="30.0" prefWidth="185.0" />
+                  <Button fx:id="submitButton1" layoutX="100.0" layoutY="140.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Submit" />
+                  <Button fx:id="cancelButton1" layoutX="200.0" layoutY="140.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Cancel" />
+                  <Label layoutX="140.0" layoutY="14.0" text="Verification" />
+               </children>
+            </Pane>
+            <Pane fx:id="authenticationPane" layoutX="125.0" layoutY="25.0" prefHeight="200.0" prefWidth="365.0" style="-fx-background-color: #ffe3d0; -fx-border-radius: 20; -fx-border-color: white; -fx-background-radius: 20;" visible="false">
+               <children>
+                  <Label layoutX="60.0" layoutY="50.0" text="Password :" />
+                  <Label layoutX="15.0" layoutY="90.0" text="Repeat Password :" />
+                  <TextField fx:id="password" layoutX="145.0" layoutY="45.0" prefHeight="30.0" prefWidth="185.0" />
+                  <TextField fx:id="Repassword" layoutX="145" layoutY="90" prefHeight="30.0" prefWidth="185.0" />
+                  <Button fx:id="submitButton" layoutX="100.0" layoutY="140.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Submit" />
+                  <Button fx:id="cancelButton" layoutX="200.0" layoutY="140.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Cancel" />
+                  <Label layoutX="140.0" layoutY="14.0" text="Verification" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</FlowPane>
